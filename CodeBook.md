@@ -1,4 +1,4 @@
-CODEBOOK
+#CODEBOOK
 ##This code book contains the description of all the variables and transformation done to get Tidy Data.
 
 ##Data Source:
@@ -11,48 +11,48 @@ CODEBOOK
 ####'features_info.txt': Shows information about the variables used on the feature vector.
 ####'features.txt': List of all features.
 ####'activity_labels.txt': Links the class labels with their activity name. There are 6 activities:
-#####WALKING
-#####WALKING_UPSTAIRS
-#####WALKING_DOWNSTAIRS
-#####SITTING
-#####STANDING
-#####LAYING
+*WALKING
+*WALKING_UPSTAIRS
+*WALKING_DOWNSTAIRS
+*SITTING
+*STANDING
+*LAYING
 ####‘y_train.txt' and ‘y_test.txt’: Training labels and Test labels.
 ####'X_train.txt': Training set observations.
 ####‘X-test.txt’: Test set observations.
 ####‘subject_train.txt’ and ‘subject_test.txt’: Identifies subject whose id values ranges from 1 till 30.
 
 ##Part 1: Data Merging to create 1 data set.
-###rbind ‘subject_train’ and ‘subject_test’ dataset.
-###rbind ‘x_train’ and subject ‘x_test’ dataset.
-###rbind ‘y_train’ and subject ‘y_test’ dataset.
-###colbind the above three datasets
+###1. rbind ‘subject_train’ and ‘subject_test’ dataset.
+###2. rbind ‘x_train’ and subject ‘x_test’ dataset.
+###3. rbind ‘y_train’ and subject ‘y_test’ dataset.
+###4. colbind the above three datasets
 
 ##Part 2: Extracting only measurements of mean and standard deviation from from combined dataset
-###By using ‘grep’ command, all the observations containing either ‘mean’ or ‘std’ are extracted into a new dataset (extractData) by ignoring all other data values
+###1.    By using ‘grep’ command, all the observations containing either ‘mean’ or ‘std’ are extracted into a new dataset (extractData) by ignoring all other data values
 
 ##Part 3: Uses descriptive activity names to name the activities in the data set
-###The activity field in ‘extractdata’ which is in numeric value are matched by corresponding Activity labels in which is taken from ‘activity_labels.txt’ file.
+###1.    The activity field in ‘extractdata’ which is in numeric value are matched by corresponding Activity labels in which is taken from ‘activity_labels.txt’ file.
 
 ##Part 4:  Appropriately labelling the data set with descriptive variable names
-###The names of all he variables in dataset extractdata are observed.
-###It can be found that the names of variables can be modified by:
-####Replacing 'Acc' by 'Accelerometer'
-####Replacing'Gyro' by 'Gyroscope'
-####Replacing 'BodyBody' by 'Body'
-####Repalcing 'Mag' by 'Magnitude'
-####Replacing '^t' by 'Time'
-####Replacing '^f' by 'Frequency'
-####Replacing '^tbody' by 'TimeBody'
-####Replacing '-mean()' by 'Mean'	•	Replacing '-std()' by 'STD'
-####Replacing '-freq()' by 'Frequency'
-####Replacing 'angle' by 'Angle'
-####Replacing '^t' by 'Time'
-####Replacing 'gravity' by 'Gravity'
-####Replacing all 'alphanumeric' characters by ''
-###3.This is done by ‘gsub’ command.
-###Replacing of all ‘alphanumeric’ characters is done by ‘str_replace_all’ command.
-###We get the following variable names for all observations.
+###1.    The names of all he variables in dataset extractdata are observed.
+###2.     It can be found that the names of variables can be modified by:
+*Replacing 'Acc' by 'Accelerometer'
+*Replacing'Gyro' by 'Gyroscope'
+*Replacing 'BodyBody' by 'Body'
+*Repalcing 'Mag' by 'Magnitude'
+*Replacing '^t' by 'Time'
+*Replacing '^f' by 'Frequency'
+*Replacing '^tbody' by 'TimeBody'
+*Replacing '-mean()' by 'Mean'	•	Replacing '-std()' by 'STD'
+*Replacing '-freq()' by 'Frequency'
+*Replacing 'angle' by 'Angle'
+*Replacing '^t' by 'Time'
+*Replacing 'gravity' by 'Gravity'
+*Replacing all 'alphanumeric' characters by ''
+### 3.    This is done by ‘gsub’ command.
+### 4.    Replacing of all ‘alphanumeric’ characters is done by ‘str_replace_all’ command.
+### 5.    We get the following variable names for all observations.
 *[1] "TimeBodyAccelerometerMeanX"                     
 *[2] "TimeBodyAccelerometerMeanY"                     
 *[3] "TimeBodyAccelerometerMeanZ"                     
