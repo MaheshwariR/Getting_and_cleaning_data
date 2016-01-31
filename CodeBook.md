@@ -37,19 +37,20 @@
 ##Part 4:  Appropriately labelling the data set with descriptive variable names
 ###1.    The names of all he variables in dataset extractdata are observed.
 ###2.     It can be found that the names of variables can be modified by:
-*Replacing 'Acc' by 'Accelerometer'
-*Replacing'Gyro' by 'Gyroscope'
-*Replacing 'BodyBody' by 'Body'
-*Repalcing 'Mag' by 'Magnitude'
-*Replacing '^t' by 'Time'
-*Replacing '^f' by 'Frequency'
-*Replacing '^tbody' by 'TimeBody'
-*Replacing '-mean()' by 'Mean'	•	Replacing '-std()' by 'STD'
-*Replacing '-freq()' by 'Frequency'
-*Replacing 'angle' by 'Angle'
-*Replacing '^t' by 'Time'
-*Replacing 'gravity' by 'Gravity'
-*Replacing all 'alphanumeric' characters by ''
+* Replacing 'Acc' by 'Accelerometer'
+* Replacing'Gyro' by 'Gyroscope'
+* Replacing 'BodyBody' by 'Body'
+* Repalcing 'Mag' by 'Magnitude'
+* Replacing '^t' by 'Time'
+* Replacing '^f' by 'Frequency'
+* Replacing '^tbody' by 'TimeBody'
+* Replacing '-mean()' by 'Mean'	
+* Replacing '-std()' by 'STD'
+* Replacing '-freq()' by 'Frequency'
+* Replacing 'angle' by 'Angle'
+* Replacing '^t' by 'Time'
+* Replacing 'gravity' by 'Gravity'
+* Replacing all 'alphanumeric' characters by ''
 ### 3.    This is done by ‘gsub’ command.
 ### 4.    Replacing of all ‘alphanumeric’ characters is done by ‘str_replace_all’ command.
 ### 5.    We get the following variable names for all observations.
